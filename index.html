@@ -1,646 +1,578 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harvyn Commerce LLC|Wholesale & Amazon FBA Distribution</title>
-  <meta name="description" content="Harvyn Commerce LLC — Wholesale sourcing and Amazon FBA distribution. Partner-focused, compliant, and logistics-ready." />
-
-  <style>
-    :root{
-      /* Brand palette (Navy/Charcoal + Orange accent + White) */
-      --navy: #0F172A;
-      --charcoal: #111827;
-      --slate: #334155;
-      --bg: #0B1220;
-      --card: #0F172A;
-      --card2: #0C1A33;
-      --text: #E5E7EB;
-      --muted: #CBD5E1;
-      --white: #F8FAFC;
-      --line: rgba(255,255,255,.10);
-      --orange: #F97316;
-      --orange2: #FB923C;
-
-      --radius: 18px;
-      --shadow: 0 18px 50px rgba(0,0,0,.35);
-    }
-
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(1200px 600px at 15% 0%, rgba(249,115,22,.18), transparent 55%),
-        radial-gradient(900px 500px at 85% 10%, rgba(59,130,246,.12), transparent 55%),
-        linear-gradient(180deg, var(--bg), #060A14 65%);
-      color: var(--text);
-      line-height:1.6;
-    }
-
-    a{ color: inherit; text-decoration: none; }
-    a:hover{ text-decoration: underline; }
-
-    .container{
-      width:min(1100px, 92vw);
-      margin:0 auto;
-    }
-
-    /* Top bar */
-    .topbar{
-      position: sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter: blur(10px);
-      background: rgba(6,10,20,.55);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .topbar-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding: 14px 0;
-      gap: 14px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      min-width: 240px;
-    }
-    .mark{
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--orange), var(--orange2));
-      box-shadow: 0 12px 25px rgba(249,115,22,.25);
-      position:relative;
-      flex: 0 0 auto;
-    }
-    .logo{
-      height: 42px;
-      width: auto;
-      display: block;
-      object-fit: contain;
-    }
-    .mark:after{
-      content:"";
-      position:absolute;
-      inset: 10px;
-      border-radius: 10px;
-      border: 2px solid rgba(255,255,255,.55);
-    }
-    .brand-name{
-      display:flex;
-      flex-direction:column;
-      line-height:1.15;
-    }
-    .brand-name strong{
-      font-size: 14px;
-      letter-spacing:.6px;
-      text-transform: uppercase;
-    }
-    .brand-name span{
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .nav{
-      display:flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      justify-content:center;
-      align-items:center;
-    }
-    .nav a{
-      font-size: 13px;
-      color: var(--muted);
-      padding: 8px 10px;
-      border-radius: 999px;
-    }
-    .nav a:hover{
-      color: var(--text);
-      background: rgba(255,255,255,.06);
-      text-decoration:none;
-    }
-
-    .cta{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      justify-content:flex-end;
-      min-width: 240px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 13px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      box-shadow: 0 10px 28px rgba(0,0,0,.22);
-      cursor:pointer;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      transition: .18s ease;
-      background: rgba(255,255,255,.10);
-      text-decoration:none;
-    }
-    .btn-primary{
-      border: none;
-      background: linear-gradient(135deg, var(--orange), var(--orange2));
-      color: #111827;
-      box-shadow: 0 14px 30px rgba(249,115,22,.25);
-    }
-    .btn-primary:hover{
-      background: linear-gradient(135deg, var(--orange2), var(--orange));
-    }
-
-    /* Hero */
-    .hero{
-      padding: 62px 0 26px;
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap: 22px;
-      align-items: stretch;
-    }
-
-    .hero-card{
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(15,23,42,.92), rgba(12,26,51,.86));
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: var(--shadow);
-      padding: 34px;
-      position:relative;
-      overflow:hidden;
-    }
-    .hero-card:before{
-      content:"";
-      position:absolute;
-      top:-140px;
-      right:-160px;
-      width: 380px;
-      height: 380px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, rgba(249,115,22,.35), transparent 60%);
-      filter: blur(2px);
-      opacity:.95;
-    }
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing:.9px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.78);
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      position:relative;
-      z-index:1;
-    }
-    .dot{
-      width:10px;height:10px;border-radius:99px;
-      background: var(--orange);
-      box-shadow: 0 0 0 6px rgba(249,115,22,.18);
-    }
-    h1{
-      margin: 14px 0 10px;
-      font-size: clamp(30px, 4.2vw, 48px);
-      line-height: 1.05;
-      position:relative;
-      z-index:1;
-    }
-    .sub{
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 15px;
-      max-width: 62ch;
-      position:relative;
-      z-index:1;
-    }
-    .hero-actions{
-      display:flex;
-      gap: 10px;
-      flex-wrap:wrap;
-      position:relative;
-      z-index:1;
-      margin-top: 18px;
-    }
-
-    .mini{
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
-      padding: 18px;
-      box-shadow: 0 12px 26px rgba(0,0,0,.28);
-    }
-    .mini h3{
-      margin: 0 0 10px;
-      font-size: 14px;
-      letter-spacing:.6px;
-      text-transform: uppercase;
-    }
-    .mini p{
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .mini ul{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* Sections */
-    section{
-      padding: 26px 0;
-    }
-    .section-title{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap: 14px;
-      margin: 6px 0 14px;
-    }
-    .section-title h2{
-      margin:0;
-      font-size: 20px;
-      letter-spacing:.3px;
-    }
-    .section-title p{
-      margin:0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-    .card{
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
-      padding: 18px;
-      box-shadow: 0 12px 26px rgba(0,0,0,.24);
-    }
-    .card h3{
-      margin:0 0 8px;
-      font-size: 16px;
-    }
-    .card p{
-      margin:0;
-      color: var(--muted);
-      font-size: 13.5px;
-    }
-
-    .pill{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing:.6px;
-      text-transform: uppercase;
-      color: rgba(17,24,39,.92);
-      background: linear-gradient(135deg, var(--orange), var(--orange2));
-      padding: 7px 10px;
-      border-radius: 999px;
-    }
-
-    .split{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .list{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 13.5px;
-    }
-
-    /* Contact */
-    .contact-card{
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(15,23,42,.86), rgba(12,26,51,.80));
-      border: 1px solid rgba(255,255,255,.10);
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-    .contact-grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 14px;
-      align-items:start;
-    }
-    .contact-row{
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
-      padding: 12px 0;
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
-    .contact-row:first-child{ border-top:none; padding-top: 0; }
-    .icon{
-      width: 34px;
-      height: 34px;
-      border-radius: 12px;
-      background: rgba(249,115,22,.14);
-      border: 1px solid rgba(249,115,22,.25);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex: 0 0 auto;
-      font-weight: 900;
-      color: var(--orange2);
-    }
-    .contact-row strong{ display:block; font-size: 13px; }
-    .contact-row span{ color: var(--muted); font-size: 13px; }
-
-    .note{
-      font-size: 12.5px;
-      color: rgba(203,213,225,.90);
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: 14px;
-      padding: 14px;
-    }
-
-    footer{
-      padding: 30px 0 50px;
-      color: rgba(203,213,225,.75);
-      font-size: 12px;
-      border-top: 1px solid rgba(255,255,255,.06);
-      margin-top: 22px;
-    }
-footer a.footer-link{
-  color: inherit;
-  text-decoration: none;
-  opacity: 0.85;
-}
-
-footer a.footer-link:hover{
-  text-decoration: underline;
-  opacity: 1;
-}
-    /* Responsive */
-    @media (max-width: 920px){
-      .hero-grid{ grid-template-columns: 1fr; }
-      .cta{ min-width:auto; }
-      .brand{ min-width:auto; }
-    }
-    @media (max-width: 820px){
-      .grid-3{ grid-template-columns: 1fr; }
-      .split{ grid-template-columns: 1fr; }
-      .contact-grid{ grid-template-columns: 1fr; }
-      .nav{ display:none; } /* keep it clean on mobile */
-      .topbar-inner{ justify-content:space-between; }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harvyn Commerce LLC|Wholesale & Amazon FBA Distribution</title>
+  <meta name="description" content="Harvyn Commerce LLC — Wholesale sourcing and Amazon FBA distribution. Partner-focused, compliant, and logistics-ready." />
+  <style>
+    :root{
+      /* Brand palette (Navy/Charcoal + Orange accent + White) */
+      --navy: #0F172A;
+      --charcoal: #111827;
+      --slate: #334155;
+      --bg: #0B1220;
+      --card: #0F172A;
+      --card2: #0C1A33;
+      --text: #E5E7EB;
+      --muted: #CBD5E1;
+      --white: #F8FAFC;
+      --line: rgba(255,255,255,.10);
+      --orange: #F97316;
+      --orange2: #FB923C;
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 15% 0%, rgba(249,115,22,.18), transparent 55%),
+        radial-gradient(900px 500px at 85% 10%, rgba(59,130,246,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg), #060A14 65%);
+      color: var(--text);
+      line-height:1.6;
+    }
+    a{ color: inherit; text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    .container{
+      width:min(1100px, 92vw);
+      margin:0 auto;
+    }
+    /* Top bar */
+    .topbar{
+      position: sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(6,10,20,.55);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .topbar-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 14px 0;
+      gap: 14px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 240px;
+    }
+    .logo{
+      height: 42px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+    .brand-name{
+      display:flex;
+      flex-direction:column;
+      line-height:1.15;
+    }
+    .brand-name strong{
+      font-size: 14px;
+      letter-spacing:.6px;
+      text-transform: uppercase;
+    }
+    .brand-name span{
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .nav{
+      display:flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content:center;
+      align-items:center;
+    }
+    .nav a{
+      font-size: 13px;
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 999px;
+    }
+    .nav a:hover{
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+      text-decoration:none;
+    }
+    /* Active nav */
+    .nav a[aria-current="page"]{
+      color: var(--text);
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      text-decoration:none;
+    }
+    .cta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:flex-end;
+      min-width: 240px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      box-shadow: 0 10px 28px rgba(0,0,0,.22);
+      cursor:pointer;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      transition: .18s ease;
+      background: rgba(255,255,255,.10);
+      text-decoration:none;
+    }
+    .btn-primary{
+      border: none;
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      color: #111827;
+      box-shadow: 0 14px 30px rgba(249,115,22,.25);
+    }
+    .btn-primary:hover{
+      background: linear-gradient(135deg, var(--orange2), var(--orange));
+    }
+    /* Hero */
+    .hero{
+      padding: 62px 0 26px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .hero-card{
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(15,23,42,.92), rgba(12,26,51,.86));
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow);
+      padding: 34px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-card:before{
+      content:"";
+      position:absolute;
+      top:-140px;
+      right:-160px;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(249,115,22,.35), transparent 60%);
+      filter: blur(2px);
+      opacity:.95;
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing:.9px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.78);
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      position:relative;
+      z-index:1;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:99px;
+      background: var(--orange);
+      box-shadow: 0 0 0 6px rgba(249,115,22,.18);
+    }
+    h1{
+      margin: 14px 0 10px;
+      font-size: clamp(30px, 4.2vw, 48px);
+      line-height: 1.05;
+      position:relative;
+      z-index:1;
+    }
+    .sub{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 62ch;
+      position:relative;
+      z-index:1;
+    }
+    .hero-actions{
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      position:relative;
+      z-index:1;
+      margin-top: 18px;
+    }
+    .mini{
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      padding: 18px;
+      box-shadow: 0 12px 26px rgba(0,0,0,.28);
+    }
+    .mini h3{
+      margin: 0 0 10px;
+      font-size: 14px;
+      letter-spacing:.6px;
+      text-transform: uppercase;
+    }
+    .mini p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .mini ul{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    /* Sections */
+    section{
+      padding: 26px 0;
+    }
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 14px;
+      margin: 6px 0 14px;
+    }
+    .section-title h2{
+      margin:0;
+      font-size: 20px;
+      letter-spacing:.3px;
+    }
+    .section-title p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      padding: 18px;
+      box-shadow: 0 12px 26px rgba(0,0,0,.24);
+    }
+    .card h3{
+      margin:0 0 8px;
+      font-size: 16px;
+    }
+    .card p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    .pill{
+      display:inline-block;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing:.6px;
+      text-transform: uppercase;
+      color: rgba(17,24,39,.92);
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    /* Contact */
+    .contact-card{
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(15,23,42,.86), rgba(12,26,51,.80));
+      border: 1px solid rgba(255,255,255,.10);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
+      align-items:start;
+    }
+    .contact-row{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding: 12px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .contact-row:first-child{ border-top:none; padding-top: 0; }
+    .icon{
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: rgba(249,115,22,.14);
+      border: 1px solid rgba(249,115,22,.25);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex: 0 0 auto;
+      font-weight: 900;
+      color: var(--orange2);
+    }
+    .contact-row strong{ display:block; font-size: 13px; }
+    .contact-row span{ color: var(--muted); font-size: 13px; }
+    footer{
+      padding: 30px 0 50px;
+      color: rgba(203,213,225,.75);
+      font-size: 12px;
+      border-top: 1px solid rgba(255,255,255,.06);
+      margin-top: 22px;
+    }
+    footer a.footer-link{
+      color: inherit;
+      text-decoration: none;
+      opacity: 0.85;
+    }
+    footer a.footer-link:hover{
+      text-decoration: underline;
+      opacity: 1;
+    }
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .cta{ min-width:auto; }
+      .brand{ min-width:auto; }
+    }
+    @media (max-width: 820px){
+      .grid-3{ grid-template-columns: 1fr; }
+      .split{ grid-template-columns: 1fr; }
+      .contact-grid{ grid-template-columns: 1fr; }
+      .nav{ display:none; } /* keep it clean on mobile */
+      .topbar-inner{ justify-content:space-between; }
+    }
+  </style>
 </head>
-
 <body>
-
-  <!-- Top bar -->
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-inner">
-        <div class="brand">
-          <img class="logo" src="assets/logo-shield.png" alt="Harvyn Commerce LLC logo">
-          <div class="brand-name">
-            <strong>Harvyn Commerce LLC</strong>
-            <span>Wholesale • Amazon FBA</span>
-          </div>
-        </div>
-
-        <nav class="nav" aria-label="Primary">
-          <a href="/about.html">About</a>
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="cta">
-          <a class="btn" href="#contact">Business Inquiry</a>
-          <a class="btn btn-primary" href="mailto:contact@harvyncommerce.com">Email Us</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Hero -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-card">
-          <div class="kicker"><span class="dot"></span> Partner-focused sourcing & fulfillment</div>
-          <h1>Wholesale sourcing & Amazon FBA distribution—done the professional way.</h1>
-          <p class="sub">
-  Harvyn Commerce LLC is a U.S.-based wholesale and e-commerce company focused on compliant, data-driven distribution through trusted online marketplaces, including Amazon FBA.
-</p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Start a Partnership</a>
-            <a class="btn" href="#services">See What We Do</a>
-          </div>
-        </div>
-
-        <aside class="mini" aria-label="Highlights">
-          <h3>Operational Focus</h3>
-          <p>Built to work with brands and distributors who value long-term relationships.</p>
-          <ul>
-            <li>Wholesale purchasing</li>
-            <li>Marketplace compliance</li>
-            <li>Inventory & logistics readiness</li>
-            <li>Customer-first standards</li>
-          </ul>
-        </aside>
-      </div>
-    </div>
-  </header>
-<section class="trust">
-  <div class="container">
-    <h3>Built for Long-Term Wholesale Partnerships</h3>
-    <ul class="trust-list">
-      <li>✔ Registered U.S. Limited Liability Company</li>
-      <li>✔ Wholesale & resale certified</li>
-      <li>✔ Amazon FBA operational infrastructure</li>
-      <li>✔ Brand-respectful pricing & MAP awareness</li>
-      <li>✔ Secure, encrypted communications</li>
-    </ul>
-  </div>
-</section>
-  <!-- About -->
-  <section id="about">
-    <div class="container">
-      <div class="section-title">
-        <h2>About Harvyn</h2>
-        <p>Clear, credible, and partner-ready.</p>
-      </div>
-
-      <div class="split">
-        <div class="card">
-          <h3>Who we are</h3>
-          <p>
-            Harvyn Commerce LLC focuses on sourcing quality products through wholesale channels and distributing them
-            through established online marketplaces. We prioritize professionalism, documentation readiness, and
-            consistent fulfillment performance.
-          </p>
-          <span class="pill">U.S.-based • Business-first</span>
-        </div>
-
-        <div class="card">
-          <h3>What partners can expect</h3>
-          <p>
-            We aim to be easy to work with: responsive communication, clean paperwork, and a long-term mindset.
-            If your brand requires reseller documentation or approval workflows, we’re ready to follow them.
-          </p>
-          <ul class="list">
-            <li>Professional communication</li>
-            <li>Compliance-minded operations</li>
-            <li>Documentation upon request</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Services</h2>
-        <p>What we do day-to-day.</p>
-      </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3>Wholesale Sourcing</h3>
-          <p>Product selection based on demand, stability, and responsible sourcing channels.</p>
-          <span class="pill">Sourcing</span>
-        </div>
-
-        <div class="card">
-          <h3>Amazon FBA Logistics</h3>
-          <p>FBA-ready inventory handling and planning to meet fulfillment and packaging requirements.</p>
-          <span class="pill">Fulfillment</span>
-        </div>
-
-        <div class="card">
-          <h3>Inventory & Compliance</h3>
-          <p>Documentation-conscious operations with a focus on accuracy and marketplace standards.</p>
-          <span class="pill">Compliance</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section id="process">
-    <div class="container">
-      <div class="section-title">
-        <h2>How we work</h2>
-        <p>Simple process. Clean execution.</p>
-      </div>
-
-      <div class="split">
-        <div class="card">
-          <h3>1) Evaluate fit</h3>
-          <p>
-            We start with a quick conversation around product lines, reseller policies,
-            and any requirements for authorization or documentation.
-          </p>
-          <ul class="list">
-            <li>Reseller requirements & approvals</li>
-            <li>Minimums, pricing, and ordering</li>
-            <li>Fulfillment and logistics expectations</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>2) Purchase & execute</h3>
-          <p>
-            Once aligned, we purchase through agreed channels and maintain a professional standard
-            for handling, prep, and fulfillment planning.
-          </p>
-          <ul class="list">
-            <li>Wholesale purchasing</li>
-            <li>Inventory accuracy</li>
-            <li>Marketplace compliance focus</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Partnerships • documentation requests • business inquiries</p>
-      </div>
-
-      <div class="contact-card">
-        <div class="contact-grid">
-          <div>
-            <div class="contact-row">
-              <div class="icon" aria-hidden="true">@</div>
-              <div>
-                <strong>Email</strong>
-                <span><a href="mailto:contact@harvyncommerce.com">contact@harvyncommerce.com</a></span>
-              </div>
-            </div>
-
-            <div class="contact-row">
-              <div class="icon" aria-hidden="true">⌂</div>
-              <div>
-                <strong>Website</strong>
-                <span>harvyncommerce.com</span>
-              </div>
-            </div>
-
-            <div class="contact-row">
-  <div class="icon" aria-hidden="true">📞</div>
-  <div>
-    <strong>Phone</strong>
-    <span>
-      <a href="tel:+17572073629">(757) 207-3629</a><br>
-      <a href="tel:+18552046441">(855) 204-6441</a> (Toll-Free)
-    </span>
-  </div>
-</div>
-          </div>
-
-          
-
-      <footer class="container">
-  © <span id="year"></span> Harvyn Commerce LLC. All rights reserved.
-  &nbsp;|&nbsp;
-  <a href="/privacy.html" class="footer-link">Privacy Policy</a>
-</footer>
-    </div>
-  </section>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <div class="brand">
+          <img class="logo" src="assets/logo-shield.png" alt="Harvyn Commerce LLC logo">
+          <div class="brand-name">
+            <strong>Harvyn Commerce LLC</strong>
+            <span>Wholesale • Amazon FBA</span>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="/index.html" aria-current="page">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/capability-statement.html">Capability</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="cta">
+          <a class="btn" href="#contact">Business Inquiry</a>
+          <a class="btn btn-primary" href="mailto:contact@harvyncommerce.com">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="kicker"><span class="dot"></span> Partner-focused sourcing & fulfillment</div>
+          <h1>Wholesale sourcing & Amazon FBA distribution—done the professional way.</h1>
+          <p class="sub">
+            Harvyn Commerce LLC is a U.S.-based wholesale and e-commerce company focused on compliant, data-driven distribution
+            through trusted online marketplaces, including Amazon FBA.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Start a Partnership</a>
+            <a class="btn" href="#services">See What We Do</a>
+          </div>
+        </div>
+        <aside class="mini" aria-label="Highlights">
+          <h3>Operational Focus</h3>
+          <p>Built to work with brands and distributors who value long-term relationships.</p>
+          <ul>
+            <li>Wholesale purchasing</li>
+            <li>Marketplace compliance</li>
+            <li>Inventory & logistics readiness</li>
+            <li>Customer-first standards</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </header>
+  <!-- About (section on homepage) -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Harvyn</h2>
+        <p>Clear, credible, and partner-ready.</p>
+      </div>
+      <div class="split">
+        <div class="card">
+          <h3>Who we are</h3>
+          <p>
+            Harvyn Commerce LLC focuses on sourcing quality products through wholesale channels and distributing them
+            through established online marketplaces. We prioritize professionalism, documentation readiness, and
+            consistent fulfillment performance.
+          </p>
+          <span class="pill">U.S.-based • Business-first</span>
+        </div>
+        <div class="card">
+          <h3>What partners can expect</h3>
+          <p>
+            We aim to be easy to work with: responsive communication, clean paperwork, and a long-term mindset.
+            If your brand requires reseller documentation or approval workflows, we’re ready to follow them.
+          </p>
+          <ul class="list">
+            <li>Professional communication</li>
+            <li>Compliance-minded operations</li>
+            <li>Documentation upon request</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>What we do day-to-day.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Wholesale Sourcing</h3>
+          <p>Product selection based on demand, stability, and responsible sourcing channels.</p>
+          <span class="pill">Sourcing</span>
+        </div>
+        <div class="card">
+          <h3>Amazon FBA Logistics</h3>
+          <p>FBA-ready inventory handling and planning to meet fulfillment and packaging requirements.</p>
+          <span class="pill">Fulfillment</span>
+        </div>
+        <div class="card">
+          <h3>Inventory & Compliance</h3>
+          <p>Documentation-conscious operations with a focus on accuracy and marketplace standards.</p>
+          <span class="pill">Compliance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Process -->
+  <section id="process">
+    <div class="container">
+      <div class="section-title">
+        <h2>How we work</h2>
+        <p>Simple process. Clean execution.</p>
+      </div>
+      <div class="split">
+        <div class="card">
+          <h3>1) Evaluate fit</h3>
+          <p>
+            We start with a quick conversation around product lines, reseller policies,
+            and any requirements for authorization or documentation.
+          </p>
+          <ul class="list">
+            <li>Reseller requirements & approvals</li>
+            <li>Minimums, pricing, and ordering</li>
+            <li>Fulfillment and logistics expectations</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>2) Purchase & execute</h3>
+          <p>
+            Once aligned, we purchase through agreed channels and maintain a professional standard
+            for handling, prep, and fulfillment planning.
+          </p>
+          <ul class="list">
+            <li>Wholesale purchasing</li>
+            <li>Inventory accuracy</li>
+            <li>Marketplace compliance focus</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Partnerships • documentation requests • business inquiries</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-grid">
+          <div>
+            <div class="contact-row">
+              <div class="icon" aria-hidden="true">@</div>
+              <div>
+                <strong>Email</strong>
+                <span><a href="mailto:contact@harvyncommerce.com">contact@harvyncommerce.com</a></span>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="icon" aria-hidden="true">⌂</div>
+              <div>
+                <strong>Website</strong>
+                <span>harvyncommerce.com</span>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="icon" aria-hidden="true">📞</div>
+              <div>
+                <strong>Phone</strong>
+                <span>
+                  <a href="tel:+17572073629">(757) 207-3629</a><br>
+                  <a href="tel:+18552046441">(855) 204-6441</a> (Toll-Free)
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="container">
+    © <span id="year"></span> Harvyn Commerce LLC. All rights reserved.
+    &nbsp;|&nbsp;
+    <a href="/privacy.html" class="footer-link">Privacy Policy</a>
+    &nbsp;|&nbsp;
+    <a href="/terms.html" class="footer-link">Terms</a>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
