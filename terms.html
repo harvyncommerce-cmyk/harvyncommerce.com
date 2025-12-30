@@ -1,199 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service | Harvyn Commerce LLC</title>
-  <meta name="description" content="Terms of Service for Harvyn Commerce LLC." />
-  <!-- Use the same CSS as your site (includes active nav styling) -->
-  <style>
-    :root{
-      --navy: #0F172A;
-      --charcoal: #111827;
-      --slate: #334155;
-      --bg: #0B1220;
-      --card: #0F172A;
-      --card2: #0C1A33;
-      --text: #E5E7EB;
-      --muted: #CBD5E1;
-      --white: #F8FAFC;
-      --line: rgba(255,255,255,.10);
-      --orange: #F97316;
-      --orange2: #FB923C;
-      --radius: 18px;
-      --shadow: 0 18px 50px rgba(0,0,0,.35);
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(1200px 600px at 15% 0%, rgba(249,115,22,.18), transparent 55%),
-        radial-gradient(900px 500px at 85% 10%, rgba(59,130,246,.12), transparent 55%),
-        linear-gradient(180deg, var(--bg), #060A14 65%);
-      color: var(--text);
-      line-height:1.6;
-    }
-    a{ color: inherit; text-decoration: none; }
-    a:hover{ text-decoration: underline; }
-    .container{ width:min(1100px, 92vw); margin:0 auto; }
-    .topbar{
-      position: sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background: rgba(6,10,20,.55);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .topbar-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 14px 0; gap: 14px;
-    }
-    .brand{ display:flex; align-items:center; gap:12px; min-width:240px; }
-    .logo{ height:42px; width:auto; display:block; object-fit:contain; }
-    .brand-name{ display:flex; flex-direction:column; line-height:1.15; }
-    .brand-name strong{ font-size:14px; letter-spacing:.6px; text-transform:uppercase; }
-    .brand-name span{ font-size:12px; color:var(--muted); }
-    .nav{ display:flex; gap:18px; flex-wrap:wrap; justify-content:center; align-items:center; }
-    .nav a{ font-size:13px; color:var(--muted); padding:8px 10px; border-radius:999px; }
-    .nav a:hover{ color:var(--text); background:rgba(255,255,255,.06); text-decoration:none; }
-    .nav a[aria-current="page"]{
-      color: var(--text);
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.14);
-      text-decoration: none;
-    }
-    .cta{ display:flex; gap:10px; align-items:center; justify-content:flex-end; min-width:240px; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding: 10px 14px; border-radius:999px;
-      font-weight:700; font-size:13px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      box-shadow: 0 10px 28px rgba(0,0,0,.22);
-      cursor:pointer;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      transition:.18s ease;
-      background: rgba(255,255,255,.10);
-      text-decoration:none;
-    }
-    .btn-primary{
-      border:none;
-      background: linear-gradient(135deg, var(--orange), var(--orange2));
-      color:#111827;
-      box-shadow: 0 14px 30px rgba(249,115,22,.25);
-    }
-    section{ padding: 40px 0 26px; }
-    .card{
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
-      padding: 22px;
-      box-shadow: 0 12px 26px rgba(0,0,0,.24);
-    }
-    .card h1{ margin:0 0 10px; font-size: 28px; }
-    .card h2{ margin:18px 0 8px; font-size: 16px; letter-spacing:.2px; }
-    .card p, .card li{ color: var(--muted); font-size: 13.5px; }
-    .list{ margin: 8px 0 0; padding-left: 18px; }
-    footer{
-      padding: 30px 0 50px;
-      color: rgba(203,213,225,.75);
-      font-size: 12px;
-      border-top: 1px solid rgba(255,255,255,.06);
-      margin-top: 22px;
-    }
-    footer a.footer-link{ color: inherit; text-decoration: none; opacity: 0.85; }
-    footer a.footer-link:hover{ text-decoration: underline; opacity: 1; }
-    @media (max-width: 820px){
-      .nav{ display:none; }
-      .topbar-inner{ justify-content:space-between; }
-      .cta{ min-width:auto; }
-      .brand{ min-width:auto; }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | Harvyn Commerce LLC</title>
+  <meta name="description" content="Terms of Service for Harvyn Commerce LLC." />
+
+  <style>
+    :root{
+      --navy:#0F172A; --charcoal:#111827; --slate:#334155;
+      --bg:#0B1220; --card:#0F172A; --card2:#0C1A33;
+      --text:#E5E7EB; --muted:#CBD5E1; --white:#F8FAFC;
+      --line:rgba(255,255,255,.10); --orange:#F97316; --orange2:#FB923C;
+      --radius:18px; --shadow:0 18px 50px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(1200px 600px at 15% 0%, rgba(249,115,22,.18), transparent 55%),
+        radial-gradient(900px 500px at 85% 10%, rgba(59,130,246,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg), #060A14 65%);
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    a{color:inherit;text-decoration:none;}
+    a:hover{text-decoration:underline;}
+
+    .container{width:min(1100px,92vw);margin:0 auto;}
+
+    /* Top bar */
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(10px);
+      background:rgba(6,10,20,.55);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .topbar-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;gap:14px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;min-width:240px;}
+    .logo{height:42px;width:auto;display:block;object-fit:contain;}
+    .brand-name{display:flex;flex-direction:column;line-height:1.15;}
+    .brand-name strong{font-size:14px;letter-spacing:.6px;text-transform:uppercase;}
+    .brand-name span{font-size:12px;color:var(--muted);}
+
+    .nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;align-items:center;}
+    .nav a{font-size:13px;color:var(--muted);padding:8px 10px;border-radius:999px;}
+    .nav a:hover{color:var(--text);background:rgba(255,255,255,.06);text-decoration:none;}
+    .nav a[aria-current="page"]{
+      color:var(--text);
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      text-decoration:none;
+    }
+
+    .cta{display:flex;gap:10px;align-items:center;justify-content:flex-end;min-width:240px;}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:10px 14px;border-radius:999px;font-weight:700;font-size:13px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      box-shadow:0 10px 28px rgba(0,0,0,.22);
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-1px);transition:.18s ease;background:rgba(255,255,255,.10);text-decoration:none;}
+    .btn-primary{
+      border:none;
+      background:linear-gradient(135deg,var(--orange),var(--orange2));
+      color:#111827;
+      box-shadow:0 14px 30px rgba(249,115,22,.25);
+    }
+
+    /* Page layout */
+    .page{padding:54px 0 30px;}
+    .page-card{
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(15,23,42,.92), rgba(12,26,51,.86));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:var(--shadow);
+      padding:28px;
+      position:relative;
+      overflow:hidden;
+    }
+    .page-card:before{
+      content:"";
+      position:absolute;top:-140px;right:-160px;
+      width:380px;height:380px;border-radius:50%;
+      background:radial-gradient(circle at 30% 30%, rgba(249,115,22,.30), transparent 60%);
+      filter:blur(2px);opacity:.95;
+    }
+    .kicker{
+      display:inline-flex;align-items:center;gap:10px;
+      font-size:12px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;
+      color:rgba(255,255,255,.78);
+      padding:8px 12px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
+      position:relative;z-index:1;
+    }
+    .dot{width:10px;height:10px;border-radius:99px;background:var(--orange);box-shadow:0 0 0 6px rgba(249,115,22,.18);}
+
+    h1{margin:14px 0 6px;font-size:clamp(28px, 4vw, 44px);line-height:1.1;position:relative;z-index:1;}
+    .meta{color:var(--muted);font-size:13.5px;margin:0 0 18px;position:relative;z-index:1;}
+
+    .content{position:relative;z-index:1;}
+    .content h2{margin:22px 0 8px;font-size:18px;}
+    .content p{margin:0 0 12px;color:rgba(203,213,225,.92);font-size:14.5px;}
+    .content ul{margin:8px 0 12px;padding-left:18px;color:rgba(203,213,225,.92);font-size:14.5px;}
+    .rule{
+      margin-top:14px;
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:14px;
+    }
+
+    footer{
+      padding:30px 0 50px;
+      color:rgba(203,213,225,.75);
+      font-size:12px;
+      border-top:1px solid rgba(255,255,255,.06);
+      margin-top:22px;
+    }
+    footer a.footer-link{color:inherit;text-decoration:none;opacity:.85;}
+    footer a.footer-link:hover{text-decoration:underline;opacity:1;}
+
+    @media (max-width: 920px){
+      .cta,.brand{min-width:auto;}
+    }
+    @media (max-width: 820px){
+      .nav{display:none;}
+      .topbar-inner{justify-content:space-between;}
+    }
+  </style>
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-inner">
-        <div class="brand">
-          <img class="logo" src="assets/logo-shield.png" alt="Harvyn Commerce LLC logo">
-          <div class="brand-name">
-            <strong>Harvyn Commerce LLC</strong>
-            <span>Wholesale • Amazon FBA</span>
-          </div>
-        </div>
-        <nav class="nav" aria-label="Primary">
-          <a href="/index.html">Home</a>
-          <a href="/about.html">About</a>
-          <a href="/capability-statement.html">Capability</a>
-          <a href="/index.html#services">Services</a>
-          <a href="/index.html#process">Process</a>
-          <a href="/index.html#contact">Contact</a>
-        </nav>
-        <div class="cta">
-          <a class="btn" href="/index.html#contact">Business Inquiry</a>
-          <a class="btn btn-primary" href="mailto:contact@harvyncommerce.com">Email Us</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section>
-    <div class="container">
-      <div class="card">
-        <h1>Terms of Service</h1>
-        <p><strong>Effective Date:</strong> January 2026</p>
-        <p>
-          These Terms of Service (“Terms”) govern your use of the Harvyn Commerce LLC website (the “Site”).
-          By accessing or using the Site, you agree to these Terms.
-        </p>
-        <h2>Use of the Site</h2>
-        <ul class="list">
-          <li>You may use this Site for lawful business purposes only.</li>
-          <li>You agree not to misuse the Site or attempt to disrupt its operation.</li>
-        </ul>
-        <h2>No Professional Advice</h2>
-        <p>
-          Content on this Site is provided for general informational purposes and does not constitute legal, tax,
-          or professional advice.
-        </p>
-        <h2>Third-Party Links</h2>
-        <p>
-          The Site may include links to third-party websites. Harvyn Commerce LLC is not responsible for the content
-          or practices of third-party sites.
-        </p>
-        <h2>Disclaimer</h2>
-        <p>
-          The Site is provided “as is” and “as available.” We make no warranties regarding accuracy, completeness,
-          or availability.
-        </p>
-        <h2>Limitation of Liability</h2>
-        <p>
-          To the fullest extent permitted by law, Harvyn Commerce LLC shall not be liable for any indirect,
-          incidental, special, consequential, or punitive damages arising from your use of the Site.
-        </p>
-        <h2>Changes</h2>
-        <p>
-          We may update these Terms from time to time. Updates will be posted on this page with a revised effective date.
-        </p>
-        <h2>Contact</h2>
-        <p>
-          Questions about these Terms?<br>
-          Email: <a href="mailto:contact@harvyncommerce.com">contact@harvyncommerce.com</a>
-        </p>
-      </div>
-    </div>
-  </section>
-  <footer class="container">
-    © <span id="year"></span> Harvyn Commerce LLC. All rights reserved.
-    &nbsp;|&nbsp;
-    <a href="/privacy.html" class="footer-link">Privacy Policy</a>
-    &nbsp;|&nbsp;
-    <a href="/terms.html" class="footer-link">Terms</a>
-  </footer>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <div class="brand">
+          <img class="logo" src="assets/logo-shield.png" alt="Harvyn Commerce LLC logo">
+          <div class="brand-name">
+            <strong>Harvyn Commerce LLC</strong>
+            <span>Wholesale • Amazon FBA</span>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/capability-statement.html">Capability</a>
+          <a href="/index.html#services">Services</a>
+          <a href="/index.html#process">Process</a>
+          <a href="/index.html#contact">Contact</a>
+        </nav>
+
+        <div class="cta">
+          <a class="btn" href="/index.html#contact">Business Inquiry</a>
+          <a class="btn btn-primary" href="mailto:contact@harvyncommerce.com">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="page">
+    <div class="container">
+      <article class="page-card">
+        <div class="kicker"><span class="dot"></span> Terms of Service</div>
+        <h1>Terms of Service</h1>
+        <p class="meta"><strong>Effective Date:</strong> January 2026</p>
+
+        <div class="content">
+          <p>
+            These Terms of Service (“Terms”) govern your use of the Harvyn Commerce LLC website (the “Site”).
+            By accessing or using the Site, you agree to these Terms.
+          </p>
+
+          <div class="rule">
+            <h2>Use of the Site</h2>
+            <p>
+              You may use the Site for lawful purposes only. You agree not to misuse the Site, attempt to gain
+              unauthorized access, or interfere with the Site’s normal operation.
+            </p>
+          </div>
+
+          <div class="rule">
+            <h2>Informational Purposes</h2>
+            <p>
+              Content on the Site is provided for general informational purposes and does not constitute legal,
+              tax, or professional advice. Harvyn Commerce LLC makes no warranties regarding completeness or accuracy.
+            </p>
+          </div>
+
+          <div class="rule">
+            <h2>External Links</h2>
+            <p>
+              The Site may contain links to third-party websites. Harvyn Commerce LLC is not responsible for the
+              content, policies, or practices of third-party sites.
+            </p>
+          </div>
+
+          <div class="rule">
+            <h2>Limitation of Liability</h2>
+            <p>
+              To the maximum extent permitted by law, Harvyn Commerce LLC shall not be liable for any indirect,
+              incidental, special, or consequential damages arising out of or related to your use of the Site.
+            </p>
+          </div>
+
+          <div class="rule">
+            <h2>Changes to These Terms</h2>
+            <p>
+              We may update these Terms from time to time. Updates will be posted on this page with a revised effective date.
+            </p>
+          </div>
+
+          <div class="rule">
+            <h2>Contact</h2>
+            <p>
+              Questions about these Terms? Contact us at
+              <a href="mailto:contact@harvyncommerce.com">contact@harvyncommerce.com</a>.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <footer class="container">
+        © <span id="year"></span> Harvyn Commerce LLC. All rights reserved.
+        &nbsp;|&nbsp;
+        <a href="/privacy.html" class="footer-link">Privacy Policy</a>
+        &nbsp;|&nbsp;
+        <a href="/terms.html" class="footer-link" aria-current="page">Terms</a>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
