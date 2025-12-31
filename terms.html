@@ -3,110 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="dark" />
   <title>Terms of Service | Harvyn Commerce LLC</title>
   <meta name="description" content="Terms of Service for Harvyn Commerce LLC." />
-  <style>
-    :root{
-      --navy:#0F172A; --charcoal:#111827; --slate:#334155;
-      --bg:#0B1220; --bg2:#060A14;
-      --card:#0F172A; --card2:#0C1A33;
-      --text:#E5E7EB; --muted:#CBD5E1; --white:#F8FAFC;
-      --line:rgba(255,255,255,.10);
-      --orange:#F97316; --orange2:#FB923C;
-      --radius:18px; --shadow:0 18px 50px rgba(0,0,0,.35);
-    }
-    html, body { background-color: var(--bg) !important; color: var(--text) !important; }
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(1200px 600px at 15% 0%, rgba(249,115,22,.18), transparent 55%),
-        radial-gradient(900px 500px at 85% 10%, rgba(59,130,246,.12), transparent 55%),
-        linear-gradient(180deg, var(--bg), var(--bg2) 65%) !important;
-      line-height:1.7;
-    }
-    @media (forced-colors: active){
-      *{ forced-color-adjust: none; }
-      body{ forced-color-adjust:none; }
-    }
-    *{ box-sizing:border-box; }
-    a{ color: inherit; text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-    .container{ width:min(1100px, 92vw); margin:0 auto; }
-    .topbar{
-      position: sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background: rgba(6,10,20,.58);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .topbar-inner{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:14px; }
-    .brand{ display:flex; align-items:center; gap:12px; min-width:220px; }
-    .logo{ height:42px; width:auto; display:block; object-fit:contain; filter: drop-shadow(0 10px 20px rgba(0,0,0,.25)); }
-    .brand-name{ display:flex; flex-direction:column; line-height:1.15; }
-    .brand-name strong{ font-size:14px; letter-spacing:.6px; text-transform:uppercase; }
-    .brand-name span{ font-size:12px; color: var(--muted); }
-    .nav{ display:flex; gap:18px; flex-wrap:wrap; justify-content:center; align-items:center; }
-    .nav a{ font-size:13px; color: var(--muted); padding:8px 10px; border-radius:999px; }
-    .nav a:hover{ color: var(--text); background: rgba(255,255,255,.06); text-decoration:none; }
-    .cta{ display:flex; gap:10px; align-items:center; justify-content:flex-end; min-width:220px; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px; border-radius:999px;
-      font-weight:800; font-size:13px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      box-shadow: 0 10px 28px rgba(0,0,0,.22);
-      transition: transform .18s ease, background .18s ease;
-    }
-    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.10); text-decoration:none; }
-    .btn-primary{
-      border:none;
-      background: linear-gradient(135deg, var(--orange), var(--orange2));
-      color:#111827;
-      box-shadow: 0 14px 30px rgba(249,115,22,.25);
-    }
-    .page{ padding: 46px 0 20px; }
-    .panel{
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(15,23,42,.92), rgba(12,26,51,.86));
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: var(--shadow);
-      padding: 26px;
-    }
-    h1{ margin:0 0 8px; font-size: clamp(26px, 3.6vw, 40px); line-height:1.1; }
-    .muted{ color: var(--muted); font-size: 13.5px; margin:0 0 18px; }
-    h2{ margin: 22px 0 10px; font-size: 18px; }
-    p{ margin: 10px 0; color: rgba(229,231,235,.92); }
-    ul{ margin: 10px 0; padding-left: 18px; color: rgba(203,213,225,.92); }
-    footer{
-      padding: 30px 0 50px;
-      color: rgba(203,213,225,.75);
-      font-size: 12px;
-      border-top: 1px solid rgba(255,255,255,.06);
-      margin-top: 22px;
-    }
-    footer a.footer-link{ color: inherit; text-decoration:none; opacity:.85; }
-    footer a.footer-link:hover{ text-decoration:underline; opacity:1; }
-    @media (max-width: 820px){
-      .nav{ display:none; }
-      .brand, .cta{ min-width:auto; }
-    }
-  </style>
+  <meta name="color-scheme" content="dark" />
+  <link rel="stylesheet" href="/assets/site.css" />
 </head>
 <body>
   <div class="topbar">
     <div class="container">
       <div class="topbar-inner">
         <div class="brand">
-          <img class="logo" src="/logo-shield.png" alt="Harvyn Commerce LLC logo">
-          <div class="brand-name">
-            <strong>Harvyn Commerce LLC</strong>
+          <img src="/logo-shield.png" alt="Harvyn logo">
+          <div class="title">
+            <strong>HARVYN COMMERCE LLC</strong>
             <span>Wholesale • Amazon FBA</span>
           </div>
         </div>
-        <nav class="nav" aria-label="Primary">
+        <nav class="nav">
           <a href="/index.html">Home</a>
           <a href="/about.html">About</a>
           <a href="/capability-statement.html">Capability</a>
@@ -114,53 +27,188 @@
           <a href="/index.html#process">Process</a>
           <a href="/index.html#contact">Contact</a>
         </nav>
-        <div class="cta">
+        <div class="actions">
           <a class="btn" href="/index.html#contact">Business Inquiry</a>
-          <a class="btn btn-primary" href="mailto:contact@harvyncommerce.com">Email Us</a>
+          <a class="btn primary" href="mailto:contact@harvyncommerce.com">Email Us</a>
         </div>
       </div>
     </div>
   </div>
   <main class="page">
     <div class="container">
-      <div class="panel">
-        <h1>Terms of Service</h1>
-        <p class="muted">Effective Date: January 2026</p>
-        <p>
-          These Terms of Service (“Terms”) govern your use of the Harvyn Commerce LLC website (the “Site”).
-          By accessing or using the Site, you agree to these Terms.
-        </p>
-        <h2>Use of the Site</h2>
-        <p>
-          You agree to use the Site for lawful purposes and not to misuse, disrupt, or attempt to gain unauthorized access to the Site or its systems.
-        </p>
-        <h2>No professional advice</h2>
-        <p>
-          Content on this Site is provided for general informational purposes only and does not constitute legal, financial, or professional advice.
-        </p>
-        <h2>Intellectual property</h2>
-        <p>
-          All trademarks, logos, and content displayed on the Site are owned by Harvyn Commerce LLC or its licensors and may not be used without permission.
-        </p>
-        <h2>Limitation of liability</h2>
-        <p>
-          To the maximum extent permitted by law, Harvyn Commerce LLC will not be liable for any indirect, incidental, or consequential damages arising from your use of the Site.
-        </p>
-        <h2>Contact</h2>
-        <p>
-          Questions about these Terms can be sent to:
-          <a href="mailto:contact@harvyncommerce.com">contact@harvyncommerce.com</a>
-        </p>
+      <div class="hero-grid">
+        <section class="hero-card">
+          <div class="kicker"><span class="dot"></span> TERMS OF SERVICE</div>
+          <h1>Terms of Service</h1>
+          <p class="sub">
+            These Terms of Service (“Terms”) govern your use of the Harvyn Commerce LLC website (the “Site”).
+            By accessing or using the Site, you agree to these Terms.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="/privacy.html">Privacy Policy</a>
+            <a class="btn" href="/index.html#contact">Business Inquiry</a>
+          </div>
+          <span class="badge">Effective: January 2026</span>
+        </section>
+        <aside class="side-card">
+          <h3>KEY POINTS</h3>
+          <ul>
+            <li>Use the Site lawfully and respectfully.</li>
+            <li>Content is provided “as is.”</li>
+            <li>We may update the Site and these Terms.</li>
+            <li>Questions? Contact us.</li>
+          </ul>
+        </aside>
       </div>
+      <section class="section">
+        <div class="section-title">
+          <h2>Use of the Site</h2>
+          <p>Basic rules for use.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Permitted use</h3>
+            <p>
+              You may use the Site for lawful purposes, including learning about Harvyn Commerce LLC and contacting us
+              regarding wholesale partnerships and business inquiries.
+            </p>
+            <ul>
+              <li>Lawful use only</li>
+              <li>No interference or disruption</li>
+              <li>No unauthorized access attempts</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Prohibited activities</h3>
+            <p>
+              You agree not to misuse the Site. This includes attempting to hack, scrape in a harmful way, distribute malware,
+              or use the Site to violate laws or third-party rights.
+            </p>
+            <ul>
+              <li>No malware or abusive behavior</li>
+              <li>No harmful scraping or attacks</li>
+              <li>No unlawful or rights-violating use</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-title">
+          <h2>Content & Intellectual Property</h2>
+          <p>Ownership and usage.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Our content</h3>
+            <p>
+              The Site and its content (text, design, graphics, logos) are owned by Harvyn Commerce LLC or licensed to us
+              and are protected by applicable intellectual property laws.
+            </p>
+            <ul>
+              <li>No copying for commercial use without permission</li>
+              <li>Brand assets remain Harvyn property</li>
+              <li>Reasonable sharing with attribution is okay</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Your communications</h3>
+            <p>
+              If you contact us, you confirm the information you provide is accurate to the best of your knowledge.
+              We may use your message to respond and maintain records of business communications.
+            </p>
+            <ul>
+              <li>Accurate information helps us respond</li>
+              <li>We keep records for operational purposes</li>
+              <li>See Privacy Policy for details</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-title">
+          <h2>Disclaimers</h2>
+          <p>Important limitations.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>“As is”</h3>
+            <p>
+              The Site is provided on an “as is” and “as available” basis. We do not guarantee the Site will be error-free
+              or uninterrupted.
+            </p>
+            <ul>
+              <li>No guarantee of uninterrupted access</li>
+              <li>No warranty of accuracy or completeness</li>
+              <li>Content may change</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>No professional advice</h3>
+            <p>
+              Information on the Site is for general informational purposes and does not constitute legal, financial,
+              or professional advice.
+            </p>
+            <ul>
+              <li>Informational only</li>
+              <li>Not legal or financial advice</li>
+              <li>Consult professionals when needed</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-title">
+          <h2>Limitation of Liability</h2>
+          <p>Scope of responsibility.</p>
+        </div>
+        <div class="card">
+          <h3>Liability limits</h3>
+          <p>
+            To the fullest extent permitted by law, Harvyn Commerce LLC will not be liable for any indirect, incidental,
+            special, consequential, or punitive damages, or any loss of profits or revenues, arising from your use of the Site.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-title">
+          <h2>Changes to These Terms</h2>
+          <p>Updates over time.</p>
+        </div>
+        <div class="card">
+          <h3>Updates</h3>
+          <p>
+            We may update these Terms from time to time. The “Effective” date at the top of this page indicates when these Terms
+            were last updated. Your continued use of the Site after changes are posted means you accept the updated Terms.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Questions about these Terms?</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Email</h3>
+            <p><a href="mailto:contact@harvyncommerce.com">contact@harvyncommerce.com</a></p>
+          </div>
+          <div class="card">
+            <h3>Phone</h3>
+            <p><a href="tel:+17572073629">(757) 207-3629</a></p>
+          </div>
+          <div class="card">
+            <h3>Toll-Free</h3>
+            <p><a href="tel:+18552046441">(855) 204-6441</a></p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        © <span id="year"></span> Harvyn Commerce LLC. All rights reserved.
+        &nbsp;|&nbsp; <a href="/privacy.html">Privacy Policy</a>
+        &nbsp;|&nbsp; <a href="/terms.html">Terms</a>
+      </footer>
     </div>
   </main>
-  <footer class="container">
-    © <span id="year"></span> Harvyn Commerce LLC. All rights reserved.
-    &nbsp;|&nbsp;
-    <a href="/privacy.html" class="footer-link">Privacy Policy</a>
-    &nbsp;|&nbsp;
-    <a href="/terms.html" class="footer-link">Terms</a>
-  </footer>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
