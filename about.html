@@ -1,73 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harvyn Commerce LLC</title>
-  <link rel="stylesheet" href="/assets/styles.css?v=9999" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | Harvyn Commerce LLC</title>
+  <meta name="description" content="About Harvyn Commerce LLC and our partner-focused approach." />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <!-- your header/nav/etc goes here -->
-<header class="topbar">
-  <div class="container">
-    <div class="topbar-inner">
-      <div class="brand">
-        <img class="logo" src="/logo-shield.png" alt="Harvyn Commerce LLC logo">
-        <div class="brand-name">
-          <strong>Harvyn Commerce LLC</strong>
-          <span>Wholesale • Amazon FBA</span>
+  <header class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <a class="brand" href="index.html">
+          <img class="logo" src="assets/logo-shield.png" alt="Harvyn Commerce LLC logo" />
+          <div class="brand-name">
+            <strong>Harvyn Commerce LLC</strong>
+            <span>Wholesale • Amazon FBA</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="capability-statement.html">Capability</a>
+          <a href="services.html">Services</a>
+          <a href="process.html">Process</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+        <div class="cta">
+          <a class="btn" href="contact.html">Business Inquiry</a>
+          <a class="btn primary" href="mailto:contact@harvyncommerce.com">Email Us</a>
         </div>
       </div>
-      <nav class="nav" aria-label="Primary">
-        <a href="/index.html">Home</a>
-        <a href="/about.html" aria-current="page">About</a>
-        <a href="/capability-statement.html">Capability</a>
-        <a href="/index.html#services">Services</a>
-        <a href="/index.html#process">Process</a>
-        <a href="/index.html#contact">Contact</a>
-      </nav>
-      <div class="cta">
-        <a class="btn" href="/index.html#contact">Business Inquiry</a>
-        <a class="btn btn-primary" href="mailto:info@harvyncommerce.com">Email Us</a>
-      </div>
     </div>
-  </div>
-</header>
-<main class="container">
-  <section class="section">
-    <h2>About Harvyn Commerce LLC</h2>
-    <p>
-      Harvyn Commerce LLC is a U.S.-based wholesale and e-commerce company focused on compliant, professional distribution through Amazon FBA
-      and other trusted online marketplaces.
-    </p>
-    <div class="list">
-      <div class="item">
-        <strong>What we value</strong>
-        <span>Professional communication, documentation readiness, and long-term business relationships.</span>
-      </div>
-      <div class="item">
-        <strong>How we operate</strong>
-        <span>Data-informed purchasing decisions, inventory discipline, and consistent follow-through.</span>
-      </div>
-      <div class="item">
-        <strong>Who we work with</strong>
-        <span>Brands and distributors seeking reliable marketplace distribution partners.</span>
-      </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="pagehead">
+        <div class="breadcrumb">Home / About</div>
+        <h1>About Harvyn Commerce LLC</h1>
+      </section>
+      <section class="section">
+        <div class="card">
+          <h3>Our approach</h3>
+          <p>
+            We operate with a partner-first mindset: clear communication, clean documentation,
+            and consistent purchasing built for long-term supplier relationships.
+          </p>
+          <ul class="clean-list">
+            <li>Wholesale purchasing aligned to distributor/brand policies</li>
+            <li>Professional FBA operations for reliable fulfillment</li>
+            <li>Focus on stable, repeatable growth</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section">
+        <div class="grid2">
+          <div class="card">
+            <h3>What we value</h3>
+            <ul class="clean-list">
+              <li>Integrity and transparency</li>
+              <li>Responsiveness and reliability</li>
+              <li>Operational discipline</li>
+              <li>Respect for brand standards</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>What to expect</h3>
+            <p>
+              If we’re a fit, we’ll coordinate onboarding, confirm ordering requirements,
+              and establish a reorder cadence based on sell-through performance and availability.
+            </p>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer-inner container">
+          <div>© <span id="year"></span> Harvyn Commerce LLC.</div>
+          <div style="display:flex; gap:14px; flex-wrap:wrap;">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </footer>
     </div>
-  </section>
-</main>
-<footer class="footer">
-  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
-    <div>© <span id="y"></span> Harvyn Commerce LLC. All rights reserved.</div>
-    <div class="small-links">
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/index.html#contact">Contact</a>
-    </div>
-  </div>
-</footer>
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
+  </main>
+  <script src="assets/site.js"></script>
 </body>
 </html>
