@@ -6,3 +6,5 @@ body {
   color: #e5e7eb !important;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
+/* CANARY */
+body { outline: 8px solid magenta !important; }
