@@ -1,1 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Harvyn Commerce LLC</title>
+  <meta name="description" content="Contact Harvyn Commerce LLC for partnership inquiries, support, and general questions." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div id="site-header"></div>
 
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <h1>Contact</h1>
+        <p>
+          For distributor/brand partnerships, email is fastest. For support, use support@harvyncommerce.com.
+        </p>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card block">
+            <h3>Direct contact</h3>
+            <p class="small">
+              <strong>Main:</strong> <a href="tel:+17572073629">(757) 207-3629</a><br/>
+              <strong>Toll-Free:</strong> <a href="tel:+18552046441">(855) 204-6441</a><br/><br/>
+              <strong>General:</strong> <a href="mailto:contact@harvyncommerce.com">contact@harvyncommerce.com</a><br/>
+              <strong>Sales:</strong> <a href="mailto:sales@harvyncommerce.com">sales@harvyncommerce.com</a><br/>
+              <strong>Support:</strong> <a href="mailto:support@harvyncommerce.com">support@harvyncommerce.com</a>
+            </p>
+
+            <div class="hr"></div>
+
+            <p class="small">
+              <strong>Partnership note:</strong> If you have channel requirements or prefer non-Amazon placement,
+              include that in your message — we can align on a structured approach.
+            </p>
+          </div>
+
+          <div class="card block">
+            <h3>Send a message</h3>
+            <p class="small">
+              This site is hosted on GitHub Pages (static). The form below opens your email client to send your message.
+              If you want a true “submit” form, use Formspree and replace the form action.
+            </p>
+
+            <form action="mailto:contact@harvyncommerce.com" method="post" enctype="text/plain">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="Name" required placeholder="Your name" />
+              </div>
+              <div>
+                <label for="company">Company</label>
+                <input id="company" name="Company" placeholder="Company name (optional)" />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="Email" type="email" required placeholder="you@company.com" />
+              </div>
+              <div>
+                <label for="topic">Topic</label>
+                <select id="topic" name="Topic">
+                  <option>Distributor / Brand Partnership</option>
+                  <option>Wholesale Account Setup</option>
+                  <option>Support</option>
+                  <option>General</option>
+                </select>
+              </div>
+              <div>
+                <label for="phone">Phone (optional)</label>
+                <input id="phone" name="Phone" placeholder="(###) ###-####" />
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="Message" required placeholder="How can we help? Include ordering requirements or channel guidance."></textarea>
+              </div>
+
+              <p class="small" style="margin:0">
+                If you provide a phone number, you consent to receiving SMS messages related to your inquiry.
+                Message &amp; data rates may apply. Message frequency varies.
+                Reply STOP to opt out. Reply HELP for help.
+              </p>
+
+              <button class="btn primary" type="submit">Compose Email</button>
+              <a class="btn" href="mailto:sales@harvyncommerce.com">Email Sales</a>
+
+              <!-- Formspree upgrade example:
+              <form action="https://formspree.io/f/XXXXYYYY" method="POST">
+              -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/includes.js"></script>
+</body>
+</html>
